@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+  <div class="editCityContainer">
+        <div class='row'>
+         
+          <div>
+            <input tpe = 'text'
+             [(ngModel)] = 'city'
+             placeholder={{location.city}}
+            />
+          </div>
+        </div>
+        <div class='row'>
+          
+          <div>
+            <input tpe = 'text'
+             [(ngModel)] = 'state'
+             placeholder= {{location.state}}
+            />
+          <br/>
+          <div  class="editNewCityButton">
+            <button
+            (click)='editCity(location.id)'
+            style='width:80px'>
+            Edit {{location.city}}
+    </button>
+  </div>
+     
+          </div>
+          
+        </div>
+  
+      </div>
+      <div class="addedCityText"
+            *ngIf="edited">
+           {{location.city}} {{editedText}}
+          </div>
+    

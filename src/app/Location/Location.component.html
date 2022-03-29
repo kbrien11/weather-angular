@@ -1,0 +1,85 @@
+<div class='card'>
+    <div class='card-header'>
+      
+    </div>
+    <div class='card-body'>
+      <div class='row'>
+        <div class='col-md-2'>Filter by:</div>
+      
+        <div class='col-md-4'>
+          <input tpe = 'text'
+           [(ngModel)] = 'listFilter'
+          />
+        </div>
+      </div>
+      
+        <button class="csv-button"
+        
+          (click)='downloadToCSV()'
+          style='width:80px'>
+          <h4>Download CSV</h4>
+          <i class="far fa-file-excel" style="font-size:34px" ></i>
+  </button>
+
+
+      <div class='row'
+           >
+        
+      </div>
+      
+        <table class='table'
+               >
+          <thead>
+            <tr>
+              
+            
+              
+              <th>City</th>
+              <th>State</th>
+              <th>Weather</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let location of filteredLocations'>
+                
+            
+              <td>
+                <a [routerLink]="['/locations', location.id]">
+                  {{ location.city }}
+                </a>
+              </td>
+              <td>{{ location.state}}</td>
+
+              <td> <button class="weather-button"
+                (click)='getWeather(location.city)'
+                style='width:80px'>
+                <a [routerLink]="['/location/weather', location.city]">
+                  
+                  weather
+                </a>
+        </button></td>
+
+              <td> <button class="edit-button"
+                
+                style='width:80px'>
+                <a [routerLink]="['/locations', location.id]">
+                  <i class="fas fa-user-edit" style="font-size:22px" ></i>
+                </a>
+        </button></td>
+        <td> <button class="delete-button"
+          (click)='deleteCity(location.id)'
+          style='width:80px'>
+          <i  class="	fas fa-trash-restore-alt" aria-hidden="true" style="font-size:24px" ></i>
+  </button></td>
+              
+            </tr>
+          </tbody>
+        </table>
+      
+    </div>
+  </div>
+  <div>
+  </div>

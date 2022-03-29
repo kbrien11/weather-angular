@@ -1,0 +1,49 @@
+
+
+.editCityContainer{
+    margin: auto;
+    width: 500px;
+    min-height: 300px;
+    border-radius: 10px;
+    margin-top: 10%;
+    background-color: inherit;
+    box-shadow: 0  4px 8px 0 rgba(0,0,0,0.2);
+}
+.editCityContainer input{
+    width: 50%;
+    margin: auto;
+    margin-left: 25%;
+    margin-top: 25px;
+    padding:10px 10px 10px 10px;
+    text-align: center;
+}
+.editNewCityButton{
+    margin: auto;
+    width: 80%;
+}
+.editNewCityButton button:hover{
+    background-color: rgb(89, 104, 151);
+}
+.editNewCityButton button{
+    margin-top: 5%;
+    display: flex;
+    margin-left: 30%;
+    padding: 15px 15px 15px 15px;
+    
+    background-color: rgb(134, 152, 204);
+    color: whitesmoke;
+    font-weight: bold;
+    min-width: 150px;
+    
+}
+.addedCityText{
+    margin: auto;
+    width: 70% ;
+    padding: 12px 12px 12px 12px;
+    background: rgb(176, 206, 149);
+    color: azure;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 3%;
+}
+

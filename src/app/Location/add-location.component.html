@@ -1,0 +1,37 @@
+<div>
+<div class="addCityContainer">
+      <div class='row'>
+       
+        <div>
+          <input tpe = 'text'
+           [(ngModel)] = 'city'
+           placeholder= 'city'
+          />
+        </div>
+      </div>
+      <div class='row'>
+        
+        <div>
+          <input tpe = 'text'
+           [(ngModel)] = 'state'
+           placeholder="State"
+          />
+        <br/>
+        <div  class="addNewCityButton">
+          <button
+          (click)='addNewCity()'
+          style='width:80px'>
+    Add
+  </button>
+</div>
+   
+        </div>
+        
+      </div>
+
+    </div>
+    <div class="addedCityText"
+          *ngIf="added">
+          {{addedText}}
+        </div>
+    </div>

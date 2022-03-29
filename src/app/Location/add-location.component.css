@@ -1,0 +1,45 @@
+.addCityContainer{
+    margin: auto;
+    width: 500px;
+    min-height: 300px;
+    border-radius: 10px;
+    margin-top: 10%;
+    background-color: inheret;
+    box-shadow: 0  4px 8px 0 rgba(0,0,0,0.2);
+}
+.addCityContainer input{
+    width: 50%;
+    margin: auto;
+    margin-left: 25%;
+    margin-top: 25px;
+    padding:10px 10px 10px 10px;
+    text-align: center;
+}
+.addNewCityButton{
+    margin: auto;
+}
+.addNewCityButton button:hover{
+    background-color: rgb(89, 104, 151);
+}
+.addNewCityButton button{
+    margin-top: 5%;
+    margin-left: 38%;
+    padding: 12px 12px 12px 12px;
+    border-radius: 8px;
+    background-color: rgb(134, 152, 204);
+    color: whitesmoke;
+    font-weight: bold;
+    width: 80%;
+    
+}
+.addedCityText{
+    margin: auto;
+    width: 70% ;
+    padding: 12px 12px 12px 12px;
+    background: rgb(176, 206, 149);
+    color: azure;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 3%;
+}
+

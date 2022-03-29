@@ -1,0 +1,71 @@
+
+<div class="addedToFavoriteText" *ngIf = '!loading && addedToFavoriteText '>
+    <p> Added to favorites</p>
+</div>
+
+<div class="errorToFavoriteText" *ngIf = '!loading && favoriteErrorText '>
+    <p> City has already been added to your favorites</p>
+</div>
+
+<div class="errorMessageContainer" *ngIf= 'errorMessage'>
+
+
+ 
+ <div *ngIf= 'errorMessage'>
+     <h3>{{weatherInfo['message']}}
+     <br/>
+   
+               
+        <p>Add {{city}}  to the database by clicking <span> <a  [routerLink]="['/location/addNewCity/', city]"> Here</a></span></p> 
+        </h3>
+    </div>
+</div>
+
+<div class="loading" *ngIf = 'loading'>
+    <p> Loading... <span><i class="	fas fa-spinner  fa-pulse" style="font-size:34px" ></i></span></p>
+</div>
+  
+<div class="weatherContainer" *ngIf= '!errorMessage &&!loading'>
+    <div>
+        <h2>{{weatherInfo[1]}}<span>({{weatherInfo[2]}})</span></h2>
+        <h4> As of {{date}}</h4>
+        <h5>{{temp + "f"}}</h5>
+            <div *ngIf = '!loading' class="grid">
+                <div>
+                    <img
+        
+            [src]=iconApi/>
+                    <p>{{weatherInfo[5]}} </p>
+                </div>
+                <div>
+                    <i class="fas fa-wind" style="font-size:44px" ></i>
+                    <p>{{wind + " " + "mph" + " "+ "winds"}} </p>
+                </div>
+            </div>
+      
+       
+
+        
+        
+          
+          
+    </div>
+</div>  
+<div class="favoriteButton">
+    <button *ngIf ='!loading && !errorMessage' class='btn btn-outline-secondary'
+(click)='addToFavorites(city,userid)'
+style='width:80px'>
+ <p>Add to favorites <span><i class="	far fa-star" style="font-size:44px" ></i></span></p>
+</button>
+</div>
+
+
+
+<button *ngIf ='!loading' class='btn btn-outline-secondary'
+(click)='onBackToLocations()'
+style='width:80px'>
+Back
+</button>
+     
+   
+

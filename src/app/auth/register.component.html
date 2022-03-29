@@ -1,0 +1,72 @@
+<div>
+
+    <div class="loginErrorContainer">
+        <div class="loginError" *ngIf = 'loginError'>
+            <h4> Error creating account, try again</h4>
+        </div>
+        </div>
+        <div class="loginsuccessContainer">
+        <div class="loginsuccess" *ngIf = 'registered'>
+          <h4> Congrats <span>{{firstName}}</span>, account created!</h4>
+      </div>
+      </div>
+  
+    <div class="login-wrapper">
+    
+
+    <div class="login-container">
+      <div class="login-image"></div>
+      <div class="login-inputs-background">
+        <h5> Register </h5>
+
+        <div>
+            <input type = 'text'
+             [(ngModel)] = 'email'
+             placeholder= 'email'
+            />
+          </div>
+
+          <div>
+            <input type = 'password'
+             [(ngModel)] = 'password'
+             placeholder= 'password'
+            />
+          </div>
+          
+          <div>
+            <input type = 'text'
+             [(ngModel)] = 'firstName'
+             placeholder= 'First Name'
+            />
+          </div>
+          <div>
+            <input type = 'text'
+             [(ngModel)] = 'lastName'
+             placeholder= 'Last Name'
+            />
+          </div>
+
+      
+        <div  class="addNewCityButton">
+            <button
+            (click)='login()'
+            style='width:80px'>
+      Login
+    </button>
+        <p>
+          
+          Already have an account yet?
+          <span>
+            
+            <a  [routerLink]="['/login']"> Login Here</a>
+          </span>
+        </p>
+      </div>
+    </div>
+   
+  </div>
+  </div>
+  
+ 
+</div>
+

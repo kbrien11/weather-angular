@@ -1,0 +1,32 @@
+<div>
+<div *ngIf="(favorites | keyvalue)?.length" class="wrapper">
+<div class="container">
+<div  *ngFor='let favorite of favorites'>
+    
+  <div class="favoriteInfo">
+      <h2>{{favorite[1]}}</h2>
+    <h4>{{roundNumber(favorite[3])}} F</h4>
+    <div class="gridinfo">
+       
+        
+        
+</div>
+<div  class="editNewCityButton">
+    <button
+    (click)='deleteFavorite(favorite[0])'
+    style='width:80px'>
+    <i  class="	far fa-trash-alt" aria-hidden="true" style="font-size:30px" ></i>
+</button>
+</div>
+
+  </div>
+</div>
+
+</div>
+</div> 
+ <div class="noData" *ngIf="!(favorites | keyvalue)?.length" ><h3> No favorites to display
+    <p> view locations by clicking <span><a  [routerLink]="['/locations']"> Here</a></span></p> </h3>
+</div>
+ 
+<p *ngIf = 'deletedText'> Deleted</p>
+</div>
